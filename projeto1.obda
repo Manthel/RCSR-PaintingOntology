@@ -1,0 +1,20 @@
+[PrefixDeclaration]
+:		http://www.semanticweb.org/manuelsoares/ontologies/2021/10/untitled-ontology-21#
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+obda:		https://w3id.org/obda/vocabulary#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+projeto1:	http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#
+
+[MappingDeclaration] @collection [[
+mappingId	allPaitings
+target		projeto1:painting{idP} a projeto1:Painting . 
+source		select * from RCSR55596.PAINTING
+
+mappingId	recentPaitings
+target		projeto1:painting{name} a projeto1:Painting ; projeto1:year {year} . 
+source		select * from RCSR55596.PAINTING where year > 1900
+]]
+

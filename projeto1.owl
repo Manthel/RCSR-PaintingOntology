@@ -1,0 +1,1070 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/untitled-ontology-21#"
+     xml:base="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/untitled-ontology-21"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:projeto1="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#IsPaintedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#IsPaintedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#painted"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Artist"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasNewStyle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasNewStyle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasStyle"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#newStyleUsedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NewStyles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasOldStyle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasOldStyle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasStyle"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#oldStyleUsedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldStyles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasStyle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasStyle">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#styleIsUsedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Styles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isUsedInPainting"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Technique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#iconicnessOfPainting -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#iconicnessOfPainting">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconicness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isLessIconicThan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isLessIconicThan">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isMoreIconicThan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isMoreIconicThan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isMoreIconicThan">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconicness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconicness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isUsedInPainting -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isUsedInPainting"/>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#newStyleUsedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#newStyleUsedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#styleIsUsedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#oldStyleUsedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#oldStyleUsedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#styleIsUsedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#painted -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#painted">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#styleIsUsedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#styleIsUsedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#styleUsesTechnique -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#styleUsesTechnique">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#wasUsedInStyle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#wasUsedInStyle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#wasUsedInStyle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Technique"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Styles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#year">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#AcrylicPainting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#AcrylicPainting">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Acrylic"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingsByTechnique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Artist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Artist">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#painted"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#FamousPainting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#FamousPainting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconicness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#IconicAcrylicPainting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#IconicAcrylicPainting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Acrylic"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingsByTechnique"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Acrylic"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#IconicOilPainting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#IconicOilPainting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Oil"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingsByTechnique"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Oil"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconicness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconicness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Unknown"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingByAge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingByAge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingsByTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingsByTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NewStyles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NewStyles">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Expressionism"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Minimalism"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Realism"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Styles"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldStyles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OilPainting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OilPainting">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Oil"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingsByTechnique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldFamousPainting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldFamousPainting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasOldStyle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldStyles"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#year"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1850</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingByAge"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasOldStyle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldStyles"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#year"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1850</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconicness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldPainting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldPainting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasOldStyle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldStyles"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#year"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1850</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingByAge"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#RecentPainting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldStyles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldStyles">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Nordic_Renaissance"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Renaissance"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Styles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasStyle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Styles"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Technique"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#IsPaintedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Artist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#PaintingsGoodForBuying -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#PaintingsGoodForBuying">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#RecentOilPainting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#RecentOilPainting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasNewStyle"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NewStyles"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#year"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1850</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Oil"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingByAge"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasNewStyle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NewStyles"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Oil"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#RecentPainting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#RecentPainting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasNewStyle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NewStyles"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#year"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1850</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#hasTechnique"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Acrylic"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Digital"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#year"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1850</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NamedPaintingByAge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Styles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Styles">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#styleIsUsedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#styleUsesTechnique"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Technique"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Technique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Technique">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Acrylic"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Digital"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Oil"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Pastel"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#WaterColor"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isUsedInPainting"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#wasUsedInStyle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Styles"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Acrylic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Acrylic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Albrecht_Durer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Albrecht_Durer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Artist"/>
+        <projeto1:painted rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#The_Large_Piece_of_Turf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Digital -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Digital"/>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Expressionism -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Expressionism"/>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf">
+        <projeto1:isMoreIconicThan rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Unknown"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic">
+        <projeto1:isMoreIconicThan rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Kenneth_Noland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Kenneth_Noland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Artist"/>
+        <projeto1:painted rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#The_broken_ring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Leonardo_Da_Vinci -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Leonardo_Da_Vinci">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Artist"/>
+        <projeto1:painted rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Mona_Lisa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Mandy_Jurgens -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Mandy_Jurgens">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Artist"/>
+        <projeto1:painted rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Winter_Sun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Minimalism -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Minimalism">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#NewStyles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Mona_Lisa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Mona_Lisa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <projeto1:hasOldStyle rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Renaissance"/>
+        <projeto1:hasTechnique rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Oil"/>
+        <projeto1:isIconic rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+        <projeto1:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1503</projeto1:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Mona_Lisa_Fake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Mona_Lisa_Fake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <projeto1:hasOldStyle rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Renaissance"/>
+        <projeto1:hasTechnique rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Oil"/>
+        <projeto1:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</projeto1:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Munch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Munch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Artist"/>
+        <projeto1:painted rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#The_Scream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Nordic_Renaissance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Nordic_Renaissance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Oil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Oil"/>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Pastel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Pastel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Realism -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Realism"/>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Renaissance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Renaissance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#OldStyles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#The_Large_Piece_of_Turf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#The_Large_Piece_of_Turf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <projeto1:hasOldStyle rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Nordic_Renaissance"/>
+        <projeto1:hasTechnique rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#WaterColor"/>
+        <projeto1:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1503</projeto1:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#The_Scream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#The_Scream">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <projeto1:hasNewStyle rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Expressionism"/>
+        <projeto1:hasTechnique rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Pastel"/>
+        <projeto1:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1893</projeto1:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#The_broken_ring -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#The_broken_ring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <projeto1:hasTechnique rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Acrylic"/>
+        <projeto1:isIconic rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+        <projeto1:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1959</projeto1:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Unknown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Unknown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconicness"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#WaterColor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#WaterColor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Winter_Sun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Winter_Sun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+        <projeto1:hasTechnique rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Digital"/>
+        <projeto1:isIconic rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+        <projeto1:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</projeto1:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#HeardOf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#isIconic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Iconic"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#year"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1950</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#PaintingsGoodForBuying"/>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Artist"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Painting"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Styles"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/manuelsoares/ontologies/2021/10/projeto1#Technique"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
